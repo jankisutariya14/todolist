@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #4f74ff, #2b3f73);
+  display: flex;
+  justify-content: center;
+}
+.App {
+  width: 1200px;
+  margin: 70px auto;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.484);
+  backdrop-filter: blur(15px);
+}
+.inner {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  margin-top: 25px;
+}
+.main h1{
+  text-align: center;
+  color: white;
+}
+.main input,
+.main select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  background-color: #e6e8ed;
+} 
+/* .main input:focus,
+.main select:focus {
+  outline: none;
+  border-color: #87f269;
+} */
+.main button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #5180F6;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.main button:hover {
+  background-color: #426acf;
+}
+.filter {
+  margin-bottom: 15px;
+}
+.filter button ,
+.filter select{
+  margin-right: 10px;
+  padding: 6px 14px;
+  border-radius: 15px;
+  border: 1px solid #5180F6;
+  background: #e6e8ed;
+  color: #5180F6;
+  cursor: pointer;
+  font-size: 15px;
+  transition-duration: 0.3s;
+}
+.filter button:hover {
+  background-color: #5180F6;
+  color: #fff;
+}
+.table-wraped{
+  border-radius: 13px;
+  overflow: hidden;        
+  margin-top: 30px;
+}
+.list-container table {
+  width: 100%;
+  border-collapse: collapse;  
+}
+.list-container th {
+  background-color: #e6e8ed;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  border: none;
+}
+.list-container td {
+  padding: 12px;
+  font-size: 15px;
+  background-color: #e6e8ed;
+  border: none; 
+  text-align: center;
+}
+.list-container td button {
+  margin-right: 6px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.list-container td button{
+  background-color: #797777;
+  color: #fffefe;
+}
+.list-container td button:hover {
+  background-color: #5f5e5e;
+}
+/* ============================= */
+/* RESPONSIVE DESIGN (CSS ONLY) */
+/* ============================= */
+
+/* Large screens (default already good) */
+@media (max-width: 1200px) {
+  .App {
+    width: 95%;
+    margin: 40px auto;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .inner {
+    flex-wrap: wrap;
+  }
+
+  .inner input,
+  .inner select,
+  .inner button {
+    flex: 1 1 48%;
+  }
+
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .App {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .inner {
+    flex-direction: column;
+  }
+
+  .inner input,
+  .inner select,
+  .inner button {
+    width: 100%;
+  }
+
+  .filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter button,
+  .filter select {
+    width: 100%;
+  }
+
+  /* Table responsiveness */
+  .table-wraped {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+  .main h1 {
+    font-size: 22px;
+  }
+
+  .list-container td button {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
