@@ -72,16 +72,16 @@ function App() {
     High: 3,
   };
 
-  // if (sort === "LTH") {
-  //   filterTask.sort(
-  //     (a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]
-  //   );
-  // }
-  // else if (sort === "HTL") {
-  //   filterTask.sort(
-  //     (a, b) => priorityOrder[b.priority] - priorityOrder[a.priority]
-  //   );
-  // }
+  if (sort === "LTH") {
+    filterTask.sort(
+      (a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]
+    );
+  }
+  else if (sort === "HTL") {
+    filterTask.sort(
+      (a, b) => priorityOrder[b.priority] - priorityOrder[a.priority]
+    );
+  }
 
 
   return (
